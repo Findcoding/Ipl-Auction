@@ -151,3 +151,22 @@ Create table International_Record(
 );
 
 
+● TABLE: PLAYER LIST FOR AUCTION
+Create table Players_List_For_Auction(
+    PID int not null,
+    Set_No int not null,
+    2021_Set varchar(10) not null,
+    Primary key(PID),
+    Foreign key(PID) references Player(PID)
+);
+
+
+● TABLE: RETAINED PLAYER LIST
+Create table Retained_Player_List(
+    PID int not null,
+    Team_Name varchar(100) not null,
+    Salary int not null,
+    Primary key(PID),
+    Foreign key(PID) references Player(PID)
+);
+
