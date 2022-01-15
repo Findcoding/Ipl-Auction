@@ -188,3 +188,22 @@ Create table Sponsor(
 );
 
 
+● TABLE: PLAYER SPONSOR
+Create table Player_Sponsor(
+    SID int not null,
+    PID int not null,
+    Primary key(PID),
+    Foreign key(PID) references Player(PID),
+    Foreign key(SID) references Sponsor(SID)
+);
+
+
+● TABLE: TEAM SPONSOR
+Create table Team_Sponsor(
+    SID int not null,
+    Team_Name varchar(100) not null,
+    Foreign key(Team_Name) references Team(Team_Name),
+    Foreign key(SID) references Sponsor(SID)
+);
+
+
