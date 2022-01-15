@@ -131,3 +131,23 @@ Create table Team_Played_Under(
 );
 
 
+● TABLE: TROPIES WON
+Create table Tropies_Won(
+    Team_Name varchar(100) not null,
+    Year int not null,
+    Primary key(Year),
+    Foreign key(Team_Name) references Team(Team_Name)
+);
+
+
+● TABLE: INTERNATIONAL RECORD
+Create table International_Record(
+    PID int not null,
+    Test_Caps int,
+    ODI_Caps int,
+    T20_Caps int,
+    Primary key(PID),
+    Foreign key(PID) references Player(PID)
+);
+
+
