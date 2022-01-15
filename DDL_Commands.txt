@@ -170,3 +170,21 @@ Create table Retained_Player_List(
     Foreign key(PID) references Player(PID)
 );
 
+
+● TABLE: PREVIOUS STANDING
+Create table Previous_Standing(
+    Year int not null,
+    Team_Name varchar(100) not null,
+    Position int not null,
+    Foreign key(Team_Name) references Team(Team_Name)
+);
+
+
+● TABLE: SPONSOR
+Create table Sponsor(
+    SID int not null,
+    Name varchar(100) not null,
+    Primary key(SID)
+);
+
+
