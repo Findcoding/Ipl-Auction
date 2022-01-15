@@ -227,4 +227,25 @@ Create table Player_Record(
 );
 
 
+● TABLE: BUYS IN
+Create table Buys_In(
+    Team_Name varchar(100) not null,
+    Money_Spent float not null,
+    Primary Key(Team_Name),
+    Foreign key(Team_Name) references Team(Team_Name)
+);
+
+
+● TABLE: AUCTIONED IN
+Create table Auctioned_In(
+    PID int not null,
+    Status varchar(100) not null,
+    Price int not null,
+    Team_Name varchar(100) not null,
+    Primary Key(PID),
+    Foreign key(PID) references Player(PID)
+);
+
+
+
 
