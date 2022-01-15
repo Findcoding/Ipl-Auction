@@ -13,6 +13,7 @@ Create table Team(
     Primary key(Team_Name)
 );
 
+
 ● TABLE: PLAYER
 Create table Player(
     PID int not null,
@@ -67,7 +68,6 @@ Create table Home_Ground(
 );
 
 
-
 ● TABLE: STATS
 Create table Stats(
     PID int not null,
@@ -86,5 +86,30 @@ Create table Stats(
     Primary key(PID),
     Foreign key(PID) references Player(PID)
 );
+
+
+● TABLE: AUCTION
+Create table Auction(
+    Date date not null,
+    Time time not null,
+    Location varchar(100) not null,
+    Auctioneer_Name varchar(100) not null,
+    Auctioneer_Age varchar(100) not null,
+    Auctioneer_Nationality varchar(100) not null,
+    Primary key(Auctioneer_Name)
+);
+
+
+● TABLE: USER
+Create table User(
+    ID int not null,
+    Name varchar(100) not null,
+    Gender varchar(100) not null,
+    Age int not null,
+    Favourite_Team varchar(100) not null,
+    Favourite_Player varchar(100) not null,
+    Primary key(ID)
+);
+
 
 
