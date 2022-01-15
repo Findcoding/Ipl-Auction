@@ -2,7 +2,7 @@
 Create database Ipl_Auction;
 
 ● TABLE: TEAM
-Create table Team (
+Create table Team(
     Team_Name varchar(100) not null,
     Full_Name varchar(100) not null,
     Tropies_Won int,
@@ -14,7 +14,7 @@ Create table Team (
 );
 
 ● TABLE: PLAYER
-Create table Player (
+Create table Player(
     PID int not null,
     Name varchar(100) not null,
     Age int not null,
@@ -34,7 +34,7 @@ Create table Player (
 
 
 ● TABLE: TEAM STAFF
-Create table Team_Staff (
+Create table Team_Staff(
     Team_Name varchar(100) not null,
     Head_Coach varchar(100) not null,
     Batting_Coach varchar(100) not null,
@@ -48,4 +48,43 @@ Create table Team_Staff (
     Primary key(Team_Name),
     Foreign key(Team_Name) references Team(Team_Name)
 );
+
+
+● TABLE: HOME GROUND
+Create table Home_Ground(
+    Name varchar(100) not null,
+    Location varchar(100) not null,
+    Capacity varchar(100) not null,
+    Pitch_Type varchar(100) not null,
+    Dimensions varchar(100) not null,
+    Year_Of_Establishment int not null,
+    Avg_First_Inning_Score float not null,
+    Avg_Second_Inning_Score float not null,
+    Curator_Name varchar(100) not null,
+    Team_Name varchar(100) not null,
+    Primary key(Team_Name),
+    Foreign key(Team_Name) reference Team(Team_Name)
+);
+
+
+
+● TABLE: STATS
+Create table Stats(
+    PID int not null,
+    Runs int,
+    Matches_Played int,
+    Strike_Rate double,
+    Batting_Average double,
+    Bowling_Average double,
+    6s int,
+    4s int,
+    100s int,
+    50s int,
+    No_of_wickets int,
+    No_of_catches int,
+    No_of_Stumpings int,
+    Primary key(PID),
+    Foreign key(PID) references Player(PID)
+);
+
 
