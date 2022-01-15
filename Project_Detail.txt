@@ -9,21 +9,25 @@ Stakeholders and their roles:
     o	They will also have the access to see the records of other players.
 
 	
-●	Coaches:
+● Coaches:
     o	They can simply view player’s achievements whenever they wish.
 
-●	Team Owner:
+● Team Owner:
     o	They can view the performances of all players, all coaches, and team achievements along with their expenditure.
 
-●	Data Admin:
+● Data Admin:
     o	They have access to see all data of players.
     o	They can also add or remove data of the team including players, stadiums, matches, and coaches.
 
-●	Data Analyst:
+● Data Analyst:
     o	They can tell players about their weaknesses.
     o	They can have data about the pitches, opposing teams, and players. 
 
+
+
 Entities:   Players, Coach, Team Owner, Data analyst, Data admin, Teams, Stats, Auction, Stadium.
+
+
 
 Schema:
 

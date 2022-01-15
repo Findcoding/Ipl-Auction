@@ -1,0 +1,14 @@
+● DATABASE NAME: IPL AUCTION
+Create database Ipl_Auction;
+
+● TABLE: TEAM
+Create table Team (
+    Team_Name varchar(100) not null,
+    Full_Name varchar(100) not null,
+    Tropies_Won int,
+    Captain varchar(100) not null,
+    Vice_Captain varchar(100),
+    Home_Ground_Name varchar(100) not null,
+    Purchase_Bag_Available int not null,
+    Primary key(Team_Name)
+);
