@@ -1,0 +1,116 @@
+
+                                        PROJECT DETAIL
+                            IPL AUCTION DATABASE MANAGEMENT SYSTEM
+
+Stakeholders and their roles:
+● Players:
+    o	They are the key stakeholders of the database
+    o	This database will have a record of all their performances and achievements.
+    o	They will also have the access to see the records of other players.
+
+	
+●	Coaches:
+    o	They can simply view player’s achievements whenever they wish.
+
+●	Team Owner:
+    o	They can view the performances of all players, all coaches, and team achievements along with their expenditure.
+
+●	Data Admin:
+    o	They have access to see all data of players.
+    o	They can also add or remove data of the team including players, stadiums, matches, and coaches.
+
+●	Data Analyst:
+    o	They can tell players about their weaknesses.
+    o	They can have data about the pitches, opposing teams, and players. 
+
+Entities:   Players, Coach, Team Owner, Data analyst, Data admin, Teams, Stats, Auction, Stadium.
+
+Schema:
+
+Players:
+	ID Name
+    Age 
+    Height 
+    Nationality 
+    Type (Bowler/Batsman) 
+    Price 
+    Jersey No. 
+    Debut date 
+    Teams played under Speciality Stats
+
+
+Teams:
+	Name 
+    Total Trophy won 
+    Captain 
+    Vice-Captain 
+    Bowling Coach 
+    Batting Coach 
+    Fielding Coach 
+    Sponsors 
+    Owners Name 
+    Most Expensive Player of team 
+    No. of Indian players 
+    No. of foreign players 
+    Previous standing at Points Table
+    Total no. of Bowlers 
+    Total no. of Batsman 
+    Total no. of All Rounders 
+    Total Indian caped players 
+    Total no. of uncapped players 
+    Total purchase bag available 
+    Total Indian slots available 
+    Total foreign slots available 
+    Current Players List 
+    Home Ground
+
+Coach:
+	Name 
+    Age 
+    Past Experiences 
+    Type 
+    International records 
+    Nationality 
+    Titles Won 
+    Nature  
+
+Stadium:
+	Name
+    Location 
+    Capacity 
+    Pitch Type 
+    No. of Entry gates 
+    No. of Exit gates 
+    No. of workers 
+    No. of tickets Counter
+    No. of restaurant’s 
+    Dimensions 
+    Year of establishment Last 5 T20 matches
+    Average 1st innings score 
+    Average 2nd innings score 
+
+Stats:
+	Player ID 
+    Total runs in IPL 
+    Total no. of match played 
+    Total 6's 
+    Total 4's 
+    Total 100+ 
+    Total 50+ 
+    Total 30+ 
+    Total no. of wickets 
+    Total no. of catches 
+    International record 
+    Debut date 
+    Teams played under 
+    Speciality
+
+Auction:
+	Date 
+    Location
+    No. of players available
+    Player’s List Total Indian players 
+    Total foreign players 
+    Teams Bag 
+    Auctioneer
+    Media
