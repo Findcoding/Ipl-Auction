@@ -12,3 +12,40 @@ Create table Team (
     Purchase_Bag_Available int not null,
     Primary key(Team_Name)
 );
+
+● TABLE: PLAYER
+Create table Player (
+    PID int not null,
+    Name varchar(100) not null,
+    Age int not null,
+    Height int not null,
+    Nationality varchar(100) not null,
+    State_Association varchar(100) not null,
+    Batting_Style varchar(100) not null,
+    Bowling_Style varchar(100) not null,
+    Speciality varchar(100) not null,
+    Base_Price int not null,
+    IPL_Debut_Year int not null,
+    Capped Boolean not null,
+    Status varchar(100) not null,
+    Type varchar(100) not null,
+    Primary key(PID)
+);
+
+
+● TABLE: TEAM STAFF
+Create table Team_Staff (
+    Team_Name varchar(100) not null,
+    Head_Coach varchar(100) not null,
+    Batting_Coach varchar(100) not null,
+    Bowling_Coach varchar(100) not null,
+    Fielding_coach varchar(100) not null,
+    Throwdown_Specialist varchar(100) not null,
+    Physio varchar(100) not null,
+    High_Performer_Analyst varchar(100) not null,
+    Physical_Trainer varchar(100) not null,
+    Team_Doctor varchar(100) not null,
+    Primary key(Team_Name),
+    Foreign key(Team_Name) references Team(Team_Name)
+);
+
