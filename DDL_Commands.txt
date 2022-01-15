@@ -112,4 +112,22 @@ Create table User(
 );
 
 
+● TABLE: OWNER
+Create table Owner(
+    ID int not null,
+    Name varchar(100) not null,
+    Team_Name varchar(100) not null,
+    Primary key(ID),
+    Foreign key(Team_Name) references Team(Team_Name)
+);
+
+
+● TABLE: TEAM PLAYED UNDER
+Create table Team_Played_Under(
+    PID int not null,
+    Teams_Name varchar(100) not null,
+    Primary Key(PID),
+    Foreign key(PID) references Player(PID)
+);
+
 
