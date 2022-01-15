@@ -28,7 +28,7 @@ Entities:   Players, Coach, Team Owner, Data analyst, Data admin, Teams, Stats, 
 Schema:
 
 Players:
-	ID Name
+    ID Name
     Age 
     Height 
     Nationality 
@@ -40,7 +40,7 @@ Players:
 
 
 Teams:
-	Name 
+    Name 
     Total Trophy won 
     Captain 
     Vice-Captain 
@@ -65,7 +65,7 @@ Teams:
     Home Ground
 
 Coach:
-	Name 
+    Name 
     Age 
     Past Experiences 
     Type 
@@ -75,7 +75,7 @@ Coach:
     Nature  
 
 Stadium:
-	Name
+    Name
     Location 
     Capacity 
     Pitch Type 
@@ -90,7 +90,7 @@ Stadium:
     Average 2nd innings score 
 
 Stats:
-	Player ID 
+    Player ID 
     Total runs in IPL 
     Total no. of match played 
     Total 6's 
@@ -106,7 +106,7 @@ Stats:
     Speciality
 
 Auction:
-	Date 
+    Date 
     Location
     No. of players available
     Player’s List Total Indian players 
