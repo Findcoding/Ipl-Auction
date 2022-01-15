@@ -207,3 +207,24 @@ Create table Team_Sponsor(
 );
 
 
+● TABLE: TEAM RECORD
+Create table Team_Record(
+    Team_Name varchar(100) not null,
+    Name varchar(100) not null,
+    Stats varchar(100) not null,
+    Primary key(Name),
+    Foreign key(Team_Name) references Team(Team_Name)
+);
+
+
+● TABLE: PLAYER RECORD
+Create table Player_Record(
+    PID int not null,
+    Name varchar(100) not null,
+    Stats varchar(100) not null,
+    Primary key(Name),
+    Foreign key(PID) references Player(PID)
+);
+
+
+
