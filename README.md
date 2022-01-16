@@ -1,5 +1,5 @@
 # Ipl-Auction
-A database is created to assist teams and their owners in an auction. ..
+We created a database to assist various stakeholders of IPL for the IPL Auction for the 2021 season. At first, we decided various stakeholders involved. Then, we collected data on our own for these stakeholders which involves players, teams, and other related attributes such as team staff, home ground, sponsors, statistics etc. We collected data for 200+ players and all 8 teams. We used various queries and executed them on our database. We used indexing to improve the efficiency of the queries further and faster retrieval of information. Further details can be found in the below documents. 
 
 ## ER Model
 ---
