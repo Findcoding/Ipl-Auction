@@ -1,0 +1,123 @@
+                                    Some Useful SQL Queries
+
+                                                                    
+1) Sort Players by total runs>1000 in IPL?
+select P.name, S.runs from player as P, stats as S where P.PID=S.PID 
+and S.runs>1000 order by S.runs desc
+ 
+2) All Retained Foreign players of CSK having Salary>300?
+Select R.Team_Name, P.name, P.Nationality, P.Base_Price from Retained_Player_List 
+as R, Player as P where P.PID=R.PID and R.team_name='CSK' and P.type='Foreign' and P.Base_Price>300 
+ 
+3) All sponsor name of CSK?
+Select S.name, T.Team_name from sponsor as S, team_sponsor as T where T.SID=S.SID 
+and T.team_name='csk' 
+ 
+ 
+4) List Top 10  player having most no. of 6’S in IPL?
+Select P.name, S.6s from player as P, stats as S where S.PID=P.PID order by 6s desc limit 10
+ 
+ 
+5) List Top 10  player having most no. of 4’S in IPL?
+Select P.name, S.4s from player as P, stats as S where S.PID=P.PID order by 4s desc limit 10
+ 
+ 
+6) List Top 10 highest wicker taker in IPL?
+Select P.name, S.No_of_wickets  from player as P, stats as S where S.PID=P.PID 
+order by No_of_wickets  desc limit 10
+ 
+ 
+7) List Top 5 having most no. of 100’S?
+Select P.name, S.100s  from player as P, stats as S where S.PID=P.PID order by 100s  desc limit 5
+ 
+ 
+8) All foreign retained players of CSK?
+Select P.name, P.Nationality, R.team_name from Player as P, retained_player_list as R 
+where R.pid=P.pid and R.team_name='csk' and P.nationality!='India' 
+ 
+ 
+9) All retained uncapped players of CSK?
+Select P.name, P.Nationality, R.team_name from Player as P, retained_player_list as R 
+where R.pid=P.pid and R.team_name='csk' and P.capped=0 
+ 
+ 
+10) List bowler having best bowling_averages in IPL?
+select P.name, S.Bowling_Average  from Player as P, stats as S where S.PID=P.PID 
+and P.Speciality='Bowler' and S.bowling_average>0  order by S.Bowling_Average desc limit 20
+ 
+ 
+11) Top 10 highest runs getter in IPL?
+Select P.name, S.Runs from player as P, stats as S where S.PID=P.PID order by runs desc limit 10
+ 
+ 
+12) Print no. of sold players in auction?
+Select count(status) from auctioned_in where status='sold' 
+
+
+13) Money Left after auction in teams purchase bag?
+Select T.team_name, T.Purchase_Bag_Available-B.money_spent from Team as T, Buys_in as B 
+where T.team_name = B.team_name
+ 
+ 
+14) Most Valuable Team according to Users??
+Select Favourite_Team, count(*) as T from user group by Favourite_Team order by T desc limit 1
+ 
+ 
+15) Most Valuable Player according to Users??
+Select Favourite_Player from user group by Favourite_Player order by count(*)  desc limit 1
+ 
+ 
+16) Players with more than 1000 IPL runs and Unsold in auction?
+Select P.name, S.runs, A.Status from Player as P, Stats as S, auctioned_in as A 
+where P.PID=A.PID and P.PID=S.PID and A.status='Unsold' and S.runs>=100
+ 
+ 
+17) Players with highest salary provided in action?
+Select P.name, A.price from Player as P, auctioned_in as A where P.PID=A.PID 
+and A.status='sold' order by A.price desc limit 1
+
+
+18) Head coach, captain and Vice-Captain of team DC?
+Select T.head_coach, P.captain, P.vice_captain from Team as P, Team_staff as T 
+where T.team_name=P.team_name and T.team_name='MI' 
+ 
+ 
+19) Teams who spent more than 15 cr in auction and their team position in year 2020 > 4?
+Select B.Team_name, P.position from Buys_In as B, Previous_Standing as P 
+where P.year=2020 and P.position>4 and B.money_spent>15 and B.team_name = P.team_name
+ 
+ 
+20) All players of team DC those who sponsors ‘SS’?
+Select P.name, T.Team_name, S.name from Player as P, retained_player_list as T, sponsor as S, 
+Player_Sponsor as B where P.PID=T.PID and T.team_name = 'DC' and T.PID=B.PID 
+and S.name='SS' and S.SID=B.SID
+ 
+ 
+21) Sort Captain of each IPL teams via most runs?
+Select T.captain, S.runs from team as T, Stats as S, Player as P where T.captain=P.name 
+and P.PID=S.PID order by s.runs desc
+ 
+  
+22) All capped players in auction from England, Australia and South Africa?
+Select P.name, P.Nationality, P.Speciality from Player as P where P.Capped=1 
+and P.nationality in ('Australia', 'England', 'South Africa') and P.status='In Auction' 
+ 
+ 
+23) All records achieved by the team MI?
+Select name, stats from team_record where team_name='MI' 
+ 
+ 
+24) All records achieved by the bowlers(Retain) of DC?
+Select P.name, R.name, R.stats from Player as P, Player_record as R, Retained_Player_list as A 
+where P.PID = R.PID and P.Speciality='Bowler' and A.Team_Name='DC' and A.PID=R.PID 
+ 
+ 
+25) All Indian players(Retain) of team RR who played Under RCB?
+Select P.name, T.teams_name from Player as P, Team_played_under as T, Retained_Player_list as A 
+where P.PID=T.PID and T.teams_name like '%RCB%' and P.Type='Indian' and A.PID=T.PID 
+and A.team_name='RR' 
+ 
+
+26) All team staffs of RCB?
+Select *from team_staff where team_name='RCB' 
+
