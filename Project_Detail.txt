@@ -25,7 +25,7 @@ Stakeholders and their roles:
 
 
 
-Entities:   Players, Coach, Team Owner, Data analyst, Data admin, Teams, Stats, Auction, Stadium.
+Entities:   Players, Coach, Team Owner, Data analyst, Data admin, Teams, Stats, Auction, Stadium, Team Staff.
 
 
 
